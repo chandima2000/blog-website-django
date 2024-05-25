@@ -19,4 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',),   #add a path to the home page
+    path('about/',),  #add a path to the about page
 ]
