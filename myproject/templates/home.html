@@ -1,16 +1,9 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block title %}
+ Home
+{% endblock %}
 
-{% load static %}  {% comment %} Now add this {% endcomment %}
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% block content %}
     <h1>Home</h1>
     <p>Check out my <a href="/about">About</a> page.</p>
-</body>
-</html>
+{% endblock  %}
