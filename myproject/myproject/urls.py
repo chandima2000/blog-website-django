@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 # Import views
 from . import views
@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('',views.homePage),   #add a path to the home page
-    
+
     path('about/',views.aboutPage),  #add a path to the about page
+
+    path('posts/',include('posts.urls'))  ##Register the new posts url inside the Main url.py
 ]
