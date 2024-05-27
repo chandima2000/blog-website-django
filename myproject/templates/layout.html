@@ -17,6 +17,8 @@
         <a href="/">Home</a> |
         <a href="/about">About</a> |
         <a href="{% url 'posts:list' %}">Newspaper</a> |
+        <a href="{% url 'users:register' %}">SignUp</a> |
+        <a href="{% url 'users:login' %}">SignIn</a>
     </nav>
     <main>
         {% block content%}
