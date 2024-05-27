@@ -30,7 +30,9 @@ urlpatterns = [
 
     path('about/',views.aboutPage),  #add a path to the about page
 
-    path('posts/',include('posts.urls'))  ##Register the new posts url inside the Main url.py
+    path('posts/',include('posts.urls')),  ##Register the new posts url inside the Main url.py
+
+    path('users/',include('users.urls'))
 ]
 
 
