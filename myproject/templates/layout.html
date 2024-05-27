@@ -14,9 +14,9 @@
 </head>
 <body>
     <nav>
-        <a href='/'>Home</a> |
-        <a href='/about'>About</a> |
-        <a href='/posts'>Newspaper</a> |
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href="{% url 'posts:list' %}">Newspaper</a> |
     </nav>
     <main>
         {% block content%}
