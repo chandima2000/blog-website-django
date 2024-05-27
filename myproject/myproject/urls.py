@@ -20,6 +20,8 @@ from django.urls import path, include
 # Import views
 from . import views
 
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +32,6 @@ urlpatterns = [
 
     path('posts/',include('posts.urls'))  ##Register the new posts url inside the Main url.py
 ]
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
