@@ -17,8 +17,16 @@
         <a href="/">Home</a> |
         <a href="/about">About</a> |
         <a href="{% url 'posts:list' %}">Newspaper</a> |
-        <a href="{% url 'users:register' %}">SignUp</a> |
-        <a href="{% url 'users:login' %}">SignIn</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'posts:new-post' %}">New Post </a> |
+            <form class="logout" action="{% url 'users:logout' %}" method="post">
+                {% csrf_token %}
+                <button class="logout-button">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:register' %}">SignUp</a> |
+            <a href="{% url 'users:login' %}">SignIn</a> 
+        {% endif %}
     </nav>
     <main>
         {% block content%}
